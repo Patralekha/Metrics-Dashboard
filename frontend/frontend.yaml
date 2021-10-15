@@ -16,7 +16,7 @@ spec:
       - name: metrics-dashboard-frontend
         image: patralekha/metrics-dashboard-frontend:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 7777
 ---
 apiVersion: v1
 kind: Service
@@ -26,6 +26,6 @@ spec:
   selector:
     app: metrics-dashboard-frontend
   ports:
-    - port: 8080
-      targetPort: 8080
+    - port: 7777
+      targetPort: 7777
   type: LoadBalancer
