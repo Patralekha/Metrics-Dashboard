@@ -46,7 +46,7 @@ def init_tracer(service):
                 'type': 'const',
                 'param': 1,
             },
-            'logging': True,
+            'logging': True
         },
         service_name=service,
     )
@@ -54,7 +54,7 @@ def init_tracer(service):
     # this call also sets opentracing.tracer
     return config.initialize_tracer()
 
-tracer = init_tracer('first-service')
+tracer = init_tracer('backend-service')
 
 @app.route('/')
 def homepage():
