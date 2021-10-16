@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: metrics-dashboard-backend
-        image: patralekha/metrics-dashboard-backend:v1
+        image: patralekha/metrics-dashboard-backend:latest
         ports:
         - containerPort: 9090
 ---
