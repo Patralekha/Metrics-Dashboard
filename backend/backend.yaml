@@ -28,6 +28,6 @@ spec:
   selector:
     app: metrics-dashboard-backend
   ports:
-    - port: 80
+    - port: 90
       targetPort: 9090
   type: LoadBalancer
