@@ -4,11 +4,11 @@ import pymongo
 from flask_pymongo import PyMongo
 
 from jaeger_client import Config
-from jaeger_client.metrics.prometheus import PrometheusMetricsFactory
+#from jaeger_client.metrics.prometheus import PrometheusMetricsFactory
 from opentelemetry import trace
-from opentelemetry.exporter import jaeger
+#from opentelemetry.exporter import jaeger
 from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchExportSpanProcessor
+#from opentelemetry.sdk.trace.export import BatchExportSpanProcessor
 from opentelemetry.instrumentation.flask import FlaskInstrumentor
 from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from opentelemetry.sdk.trace import TracerProvider
