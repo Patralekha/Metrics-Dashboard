@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: metrics-dashboard-frontend
+  annotations:
+    "sidecar.jaegertracing.io/inject": "true"
 spec:
   replicas: 3
   selector:
@@ -15,6 +17,7 @@ spec:
       containers:
       - name: metrics-dashboard-frontend
         image: patralekha/metrics-dashboard-frontend:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 7777
 ---
@@ -26,6 +29,6 @@ spec:
   selector:
     app: metrics-dashboard-frontend
   ports:
-    - port: 7777
+    - port: 77
       targetPort: 7777
   type: LoadBalancer

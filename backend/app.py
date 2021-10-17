@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 import pymongo
 import logging
 from flask_pymongo import PyMongo
-
+from flask_opentracing import FlaskTracing
 from jaeger_client import Config
 
 from opentelemetry import trace
@@ -55,6 +55,7 @@ def init_tracer(service):
     return config.initialize_tracer()
 
 tracer = init_tracer('backend-service')
+tracing = FlaskTracing(tracer,True,app)
 
 @app.route('/')
 def homepage():
