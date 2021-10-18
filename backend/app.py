@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from prometheus_flask_exporter.multiprocess import GunicornInternalPrometheusMetrics
 
 import pymongo
 import logging
@@ -25,6 +26,7 @@ trace.get_tracer_provider().add_span_processor(
 )
 
 app = Flask(__name__)
+metrics = GunicornInternalPrometheusMetrics(app)
 
 FlaskInstrumentor().instrument_app(app)
 RequestsInstrumentor().instrument()
@@ -76,6 +78,14 @@ def add_star():
   new_star = star.find_one({'_id': star_id })
   output = {'name' : new_star['name'], 'distance' : new_star['distance']}
   return jsonify({'result' : output})
+
+
+metrics.register_default(
+    metrics.counter(
+        'by_path_counter', 'Request count by request paths',
+        labels={'path': lambda: request.path}
+    )
+)
 
 if __name__ == "__main__":
     app.run()

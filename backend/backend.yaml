@@ -32,3 +32,24 @@ spec:
     - port: 90
       targetPort: 9090
   type: LoadBalancer
+
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: backend-monitoring
+  namespace: monitoring
+  labels:
+    app: metrics-dashboard-backend
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: metrics-dashboard-backend
+  endpoints:
+  - port: backend
+    path: /metrics
+    interval: 15s
+  namespaceSelector:
+    matchNames:
+    - default
