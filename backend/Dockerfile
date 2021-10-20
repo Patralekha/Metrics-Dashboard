@@ -15,5 +15,8 @@ ENV PROJECT_ID ${PROJECT_ID}
 RUN apt-get update && \
     pip install --upgrade pip && \
     pip install -r requirements.txt
+    
+ENV PROMETHEUS_MULTIPROC_DIR /app
+ENV prometheus_multiproc_dir /app
 
 CMD ["gunicorn", "--access-logfile", "-", "--error-logfile", "-", "-w", "4", "-b", "0.0.0.0:9090", "app:app"]
