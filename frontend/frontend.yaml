@@ -33,23 +33,4 @@ spec:
       targetPort: 7777
   type: LoadBalancer
 
----
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: frontend-monitoring
-  namespace: monitoring
-  labels:
-    app: metrics-dashboard-frontend
-    release: prometheus
-spec:
-  selector:
-    matchLabels:
-      app: metrics-dashboard-frontend
-  endpoints:
-  - port: frontend
-    path: /metrics
-    interval: 15s
-  namespaceSelector:
-    matchNames:
-    - default
+
