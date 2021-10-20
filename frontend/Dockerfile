@@ -12,7 +12,7 @@ RUN apt-get update && \
     pip install --upgrade pip && \
     pip install -r requirements.txt
     
-ENV PROMETHEUS_MULTIPROC_DIR /tmp
-ENV prometheus_multiproc_dir /tmp
+ENV PROMETHEUS_MULTIPROC_DIR /app
+ENV prometheus_multiproc_dir /app
 
 CMD ["gunicorn", "--access-logfile", "-", "--error-logfile", "-", "-w", "4", "-b", "0.0.0.0:7777", "app:app"]
