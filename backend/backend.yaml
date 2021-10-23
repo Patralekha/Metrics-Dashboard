@@ -19,7 +19,7 @@ spec:
         image: patralekha/metrics-dashboard-backend:v1
         imagePullPolicy: Always
         ports:
-        - name: backend-deloyment-port
+        - name: backenddepport
           containerPort: 9090
 ---
 apiVersion: v1
@@ -32,6 +32,6 @@ spec:
   ports:
     - name: backend
       port: 90
-      targetPort: backend-deployment-port
+      targetPort: backenddepport
   type: LoadBalancer
 
