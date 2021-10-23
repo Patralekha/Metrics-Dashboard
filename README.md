@@ -2,9 +2,6 @@
 Project 3: Observability
 
 
-
-
-
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
 ## Verify the monitoring installation

@@ -2,6 +2,10 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: frontend-monitoring
+  annotations: 
+    prometheus.io/scrape: "true"
+    prometheus.io/path: /metrics
+    prometheus.io/port: frontend
   namespace: monitoring
   labels:
     app: metrics-dashboard-frontend
