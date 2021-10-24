@@ -10,9 +10,13 @@ Project 3: Observability
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
+![grafana homepage](https://user-images.githubusercontent.com/46372817/138604575-13c7cccf-4ea9-41f0-a304-f42805ab034d.png)
+
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
+![Screenshot from 2021-10-24 21-59-58](https://user-images.githubusercontent.com/46372817/138604607-79801a84-08b7-49f4-8e3a-721593995ce7.png)
+
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
@@ -25,6 +29,9 @@ Project 3: Observability
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here.
+![Screenshot from 2021-10-24 22-04-49](https://user-images.githubusercontent.com/46372817/138604621-59ab6e1e-af97-47ff-a967-e9606316b92b.png)
+![Screenshot from 2021-10-17 23-46-07](https://user-images.githubusercontent.com/46372817/138604645-b00aa118-580c-4272-a7dd-c31c654abe8d.png)
+
 
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
