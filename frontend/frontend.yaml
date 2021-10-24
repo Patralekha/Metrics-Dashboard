@@ -20,7 +20,7 @@ spec:
         imagePullPolicy: Always
         ports:
         - name: frontenddepport
-          containerPort: 9090
+          containerPort: 7777
 ---
 apiVersion: v1
 kind: Service
@@ -31,7 +31,7 @@ spec:
     app: metrics-dashboard-frontend
   ports:
     - name: frontend
-      port: 9091
+      port: 77
       targetPort: frontenddepport
   type: LoadBalancer
 
