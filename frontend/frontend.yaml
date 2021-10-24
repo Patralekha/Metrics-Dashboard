@@ -31,7 +31,7 @@ spec:
     app: metrics-dashboard-frontend
   ports:
     - name: frontend
-      port: 9090
+      port: 9091
       targetPort: frontenddepport
   type: LoadBalancer
 
