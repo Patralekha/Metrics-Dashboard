@@ -19,8 +19,8 @@ spec:
         image: patralekha/metrics-dashboard-frontend:v1
         imagePullPolicy: Always
         ports:
-        - name: frontend-deployment-port
-          containerPort: 9090
+        - name: frontenddepport
+          containerPort: 7777
 ---
 apiVersion: v1
 kind: Service
@@ -31,8 +31,8 @@ spec:
     app: metrics-dashboard-frontend
   ports:
     - name: frontend
-      port: 9090
-      targetPort: frontend-deployment-port
+      port: 77
+      targetPort: frontenddepport
   type: LoadBalancer
 
 
