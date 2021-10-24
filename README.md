@@ -16,6 +16,7 @@ Project 3: Observability
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
 ![Screenshot from 2021-10-24 21-59-58](https://user-images.githubusercontent.com/46372817/138604607-79801a84-08b7-49f4-8e3a-721593995ce7.png)
+![Screenshot from 2021-10-24 22-33-16](https://user-images.githubusercontent.com/46372817/138604740-3e455335-6f1f-44dd-926e-db0e88875d88.png)
 
 
 ## Describe SLO/SLI
