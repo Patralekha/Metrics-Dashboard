@@ -73,17 +73,32 @@ Description:
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name three SLIs that you would use to measure the success of this SLO.
 
 1.Uptime : 99% service will be up and running within a month. <br/>
-2.Latency: All requests to frontend and backend service will be less that 250ms in a month. <br/>
+2.Latency: 99% requests to frontend and backend service will be less that 250ms in a month. <br/>
 3.Error Rate: 99% of responses will be 20x within a month. <br/>
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 <br/><br/>
-1.Uptime:<br/><br/>
-2.Traffic: <br/><br/>
-3.Errors per second: <br/><br/>
-4.Resource Utilization: <br/><br/>
-5.Latency: <br/><br/>
+1.Uptime:<br/>
+   i.Percentage of 20x Requests/second
+   ii.Average of services uptime
+   <br/><br/>
+2.Traffic: <br/>
+   i.Number of Requests/second
+   <br/><br/>
+3.Errors per second: <br/>
+   i.Errors per second (number of 40x and 50x responses)
+   <br/><br/>
+4.Resource Utilization: <br>
+    i.CPU Usage (Per Pod)
+    ii.Memory Usage (Per Pod)
+    iii.CPU Usage (Per Node)
+    iv.Memory Usage (Per Node)
+<br/><br/>
+5.Latency: <br/>
+   i.Average Response Time
+   ii.Requests under 250ms
+   <br/><br/>
 
 
 ## Final Dashboard
