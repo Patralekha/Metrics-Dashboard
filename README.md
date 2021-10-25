@@ -10,7 +10,8 @@ Project 3: Observability
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
-![grafana homepage](https://user-images.githubusercontent.com/46372817/138604575-13c7cccf-4ea9-41f0-a304-f42805ab034d.png)
+![Screenshot from 2021-10-25 17-12-09](https://user-images.githubusercontent.com/46372817/138702727-d3b0a6f5-58a2-4fe6-a518-22e24f9ab96f.png)
+
 
 
 ## Create a Basic Dashboard
