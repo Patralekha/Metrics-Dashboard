@@ -35,8 +35,8 @@ Project 3: Observability
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here.
-![Screenshot from 2021-10-24 22-04-49](https://user-images.githubusercontent.com/46372817/138604621-59ab6e1e-af97-47ff-a967-e9606316b92b.png)
-![Screenshot from 2021-10-17 23-46-07](https://user-images.githubusercontent.com/46372817/138604645-b00aa118-580c-4272-a7dd-c31c654abe8d.png)
+![Screenshot from 2021-10-25 19-06-18](https://user-images.githubusercontent.com/46372817/138705944-ecfb36cf-7677-4cb4-8816-81fa2579173b.png)
+![Screenshot from 2021-10-25 19-06-29](https://user-images.githubusercontent.com/46372817/138705984-69ef21d2-c7c1-49ff-b4f8-400525e81e39.png)
 
 
 ## Jaeger in Dashboards
