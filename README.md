@@ -78,6 +78,12 @@ Description:
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
+1.Uptime:<br/><br/>
+2.Traffic: <br/><br/>
+3.Errors per second: <br/><br/>
+4.Resource Utilization: <br/><br/>
+5.Latency: <br/><br/>
+
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
