@@ -20,7 +20,7 @@ spec:
         magePullPolicy: Always
         ports:
         - name: trial-port
-          containerPort: 8080
+          containerPort: 9080
 ---
 apiVersion: v1
 kind: Service
@@ -30,6 +30,6 @@ spec:
   selector:
     app: trial
   ports:
-    - port: 8083
+    - port: 9083
       targetPort: trial-port
   type: LoadBalancer
