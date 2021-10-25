@@ -33,11 +33,11 @@ SLO is the goal or objective that a team aims to accomplish so that the customer
 ## Creating SLI metrics.
 *TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
 
-1.Uptime: the percentage of time our service is available and working as expected
-2.Traffic: number of requests per second to our service
-3.Errors per second: number of requsts per second to our service that fails with 40x or 50x error codes
-4.Resource Utilization: the percentage of CPU and memory utilized by our service
-5.Latency: the time taken by our service to respond to a request that is sent
+1.Uptime: the percentage of time our service is available and working as expected \n
+2.Traffic: number of requests per second to our service \n
+3.Errors per second: number of requsts per second to our service that fails with 40x or 50x error codes \n
+4.Resource Utilization: the percentage of CPU and memory utilized by our service \n
+5.Latency: the time taken by our service to respond to a request that is sent \n
 
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
