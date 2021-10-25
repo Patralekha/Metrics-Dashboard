@@ -27,6 +27,9 @@ Project 3: Observability
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
 
+SLI is the actual metric that measures or tells us the performance of a service.It is a real number generally expressed as percentage.
+SLO is the goal or objective that a team aims to accomplish so that the customers expectations can be met.More specifically it is a range that a team aims to maintain such that the SLI falls within this range or exceeds the goal set in way that meets the customer's expectations.For example SLO is likely 99.85% uptime and  SLI is the actual measurement of your uptime. It can be 99.86%. 
+
 ## Creating SLI metrics.
 *TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
 
