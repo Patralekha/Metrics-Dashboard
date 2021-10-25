@@ -72,6 +72,10 @@ Description:
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name three SLIs that you would use to measure the success of this SLO.
 
+1.Uptime : 99% service will be up and running within a month.
+2.Latency: All requests to frontend and backend service will be less that 250ms in a month
+3.Error Rate: 99% of responses will be 20x within a month.
+
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 
