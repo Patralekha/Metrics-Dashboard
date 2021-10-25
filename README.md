@@ -7,6 +7,9 @@ Project 3: Observability
 ## Verify the monitoring installation
 
 *TODO:* run `kubectl` command to show the running pods and services for the three components. Copy and paste the output or take a screenshot of the output and include it here to verify the installation
+![Screenshot from 2021-10-25 18-55-27](https://user-images.githubusercontent.com/46372817/138703976-16ddd7b8-2bab-4722-b209-f162265da305.png)
+![Screenshot from 2021-10-25 18-55-41](https://user-images.githubusercontent.com/46372817/138704019-b4f8e10f-3b39-4eab-8cd9-21b12c98d29d.png)
+
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
