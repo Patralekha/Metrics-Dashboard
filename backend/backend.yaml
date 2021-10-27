@@ -4,6 +4,12 @@ metadata:
   name: metrics-dashboard-backend
   annotations:
     "sidecar.jaegertracing.io/inject": "true" 
+    prometheus.io/scrape: "true"
+    prometheus.io/path: /metrics
+    prometheus.io/port: backendport
+  labels:
+    name: metrics-dashboard-backend
+    release: prometheus
 spec:
   replicas: 1
   selector:
