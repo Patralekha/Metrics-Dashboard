@@ -83,8 +83,7 @@ Description:
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 <br/><br/>
 1.Uptime:<br/>
-   i.Percentage of 20x Requests/second <br/>
-   ii.Average of services uptime 
+   i.Average of services uptime 
    <br/><br/>
 2.Traffic: <br/>
    i.Number of Requests/second
@@ -100,7 +99,6 @@ Description:
 <br/><br/>
 5.Latency: <br/>
    i.Average Response Time <br/>
-   ii.Requests under 250ms
    <br/><br/>
 
 
