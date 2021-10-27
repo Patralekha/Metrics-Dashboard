@@ -104,3 +104,7 @@ Description:
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+![Screenshot from 2021-10-27 20-58-19](https://user-images.githubusercontent.com/46372817/139118565-90589e3f-32f4-4b23-90d1-cf1d04ee9799.png)
+![Screenshot from 2021-10-27 21-35-04](https://user-images.githubusercontent.com/46372817/139118608-0da5cdfa-0d53-4bae-bcfd-856bcf4c39a0.png)
+
+
