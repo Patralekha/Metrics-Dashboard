@@ -37,7 +37,7 @@ tracer = trace.get_tracer(__name__)
 # Define the app, the Prometheus Metrics and the instrumentor for Flask, also determine the server used
 
 app = Flask(__name__)
-FlaskInstrumentor().instrument_app(app, excluded_urls="metrics")
+FlaskInstrumentor().instrument_app(app)
 gunicorn_app = "gunicorn" in os.environ.get("SERVER_SOFTWARE", "")
 if gunicorn_app:
     metrics = GunicornInternalPrometheusMetrics(app)
