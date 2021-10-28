@@ -60,7 +60,7 @@ app.config['MONGO_URI'] = 'mongodb://example-mongodb-svc.default.svc.cluster.loc
 
 mongo = PyMongo(app)
 
-
+"""
 
 def init_tracer(service):
     logging.getLogger('').handlers = []
@@ -82,7 +82,7 @@ def init_tracer(service):
 
 tracer = init_tracer('backend-service')
 tracing = FlaskTracing(tracer,True,app)
-flask_head_tracing = tracing.get_span()
+flask_head_tracing = tracing.get_span()   """
 
 @app.route('/')
 def homepage():
