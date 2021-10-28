@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from prometheus_flask_exporter.multiprocess import GunicornInternalPrometheusMetrics
-
+from opentelemetry.sdk.resources import SERVICE_NAME, Resource
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from prometheus_flask_exporter import PrometheusMetrics
 import pymongo
 import logging, os, random, opentracing
 from flask_pymongo import PyMongo
@@ -19,17 +21,39 @@ from opentelemetry.sdk.trace.export import (
     SimpleExportSpanProcessor,
 )
 
+trace.set_tracer_provider(TracerProvider(resource=Resource.create({SERVICE_NAME: "backend-service"})))
+# Create the exporter for jaeger
+jaeger_exporter = JaegerExporter()
 
-trace.set_tracer_provider(TracerProvider())
-trace.get_tracer_provider().add_span_processor(
-    SimpleExportSpanProcessor(ConsoleSpanExporter())
-)
+# Add the exporter to the spanner
+spanner = BatchSpanProcessor(jaeger_exporter)
+
+# Make sure it is added here
+trace.get_tracer_provider().add_span_processor(spanner)
+
+# make sure to define the tracer here
+tracer = trace.get_tracer(__name__)
+
+# Define the app, the Prometheus Metrics and the instrumentor for Flask, also determine the server used
 
 app = Flask(__name__)
-metrics = GunicornInternalPrometheusMetrics(app)
+FlaskInstrumentor().instrument_app(app, excluded_urls="metrics")
+gunicorn_app = "gunicorn" in os.environ.get("SERVER_SOFTWARE", "")
+if gunicorn_app:
+    metrics = GunicornInternalPrometheusMetrics(app)
+else:
+    metrics = PrometheusMetrics(app)
+    
+#trace.set_tracer_provider(TracerProvider())
+#trace.get_tracer_provider().add_span_processor(
+#    SimpleExportSpanProcessor(ConsoleSpanExporter())
+#)
 
-FlaskInstrumentor().instrument_app(app)
-RequestsInstrumentor().instrument()
+#app = Flask(__name__)
+#metrics = GunicornInternalPrometheusMetrics(app)
+
+#FlaskInstrumentor().instrument_app(app)
+#RequestsInstrumentor().instrument()
 
 app.config['MONGO_DBNAME'] = 'example-mongodb'
 app.config['MONGO_URI'] = 'mongodb://example-mongodb-svc.default.svc.cluster.local:27017/example-mongodb'
